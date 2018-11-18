@@ -7,7 +7,7 @@ import java.util.Map;
  * @Author: jianwen
  * @Date: 2018/11/18 下午3:10
  */
-public class solution {
+public class Solution {
     /**
      * 方法一：暴力法
      * @param nums

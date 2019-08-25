@@ -44,13 +44,22 @@ public class MyLinkedList<E> {
         return node.getE();//获取节点中的数据域元素并返回
     }
 
-    //增加元素
+    //增加元素（尾插）
     public void add(E e){
         Node<E> node = new Node<>(e);//以 e 实例化一个节点
         last.setNext(node);//往尾节点后加节点
         last = node;
         size++;
     }
+
+    //增加元素(头插)
+    public void headAdd(E e){
+        Node<E> node = new Node<>(e);//以 e 实例化一个节点
+        node.setNext(head.getNext());
+        head.setNext(node);//往头节点后加节点
+        size++;
+    }
+
 
     //删除指定的节点 e，并返回 e
     public E delete(int index){
@@ -87,5 +96,11 @@ public class MyLinkedList<E> {
         Node<E> node = select(index);
         node.setE(xNode.getE());
         return node.getE();
+    }
+
+    //整表删除
+    public boolean allDelete(MyLinkedList linkedList){
+
+        return true;
     }
 }
